@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+{% block main %}
+
+    {% if history %}
+    <h2>History</h2>
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Buy or sell</th>
+                <th>Transaction Time</th>
+                <th>Price</th>
+            </tr>
+            {% for row in history %}
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.quantity }}</td>
+                <td>{{ row.type }}</td>
+                <td>{{ row.transaction_time }}</td>
+                {% if row.price %}
+                <td>{{ row.price | usd }}</td>
+                {% else %}
+                <td>{{ sell_price | usd }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <br>
+    <h5>User currently has no past transactions</h5>
+    {% endif %}
+
+
+{% endblock %}

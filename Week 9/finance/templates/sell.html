@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+{% block main %}
+    <h2>Sell Stock</h2>
+    {% if no_stock %}
+    <h3>You don't own any stock</h3>
+    {% else %}
+    <form action="/sell" method="post">
+        <div class="mb-3">
+            <select name="symbol">
+                <option disabled selected>Symbol</option>
+                {% if symbols %}
+                {% for sym in symbols %}
+                <option value={{sym.name}}>{{sym.name}}</option>
+                {% endfor %}
+                {% endif %}
+            </select>
+            <input name="shares" placeholder="number of shares" type="number" min="1">
+            <div>
+                <button class="btn btn-primary" type="submit">Sell now</button>
+            </div>
+        </div>
+    </form>
+    {% endif %}
+{% endblock %}

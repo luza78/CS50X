@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your quote
+{% endblock %}
+{% block main %}
+<h2>Your quote</h2>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{ stock.symbol }}</td>
+            <td> {{ stock.price | usd }}</td>
+        </tr>
+    </tbody>
+</table>
+        <form action="/quote" method="get">
+                <input class="btn btn-primary" type="submit" value="Lookup another">
+            </form>
+
+{% endblock %}

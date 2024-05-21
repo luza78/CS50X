@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+{% block main %}
+    <h1>Portfolio</h1>
+    <br>
+        {% if portfolio %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Cash available</th>
+                    <td>{{portfolio_cash | usd}}</td>
+                    <th>Portfolio Value</th>
+                    <td>{{portfolio_value | usd}}</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Quantity</th>
+                    <th>Current Price per share</th>
+                    <th>Current Total Value</th>
+                </tr>
+
+
+            {% for row in portfolio %}
+
+
+            <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.quantity_owned }}</td>
+                <td>{{ row.current_price | usd }}</td>
+                <td>{{ row.current_total_price | usd }}</td>
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+    </table>
+            {% else %}
+            <br>
+            <h3>You currently don't own any stock</h3>
+            {% endif %}
+
+
+
+
+{% endblock %}

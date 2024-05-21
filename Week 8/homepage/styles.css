@@ -1,0 +1,60 @@
+.header {
+    background-color: black;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.centered-text {
+    text-align: center;
+}
+.container2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.video {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-text {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+}
+
+.nopad {
+    padding: 0px;
+  }
+
+.fsize {
+    font-size: 18px;
+}
+
+#dynamic1 {
+    opacity: 0;
+    transition: 0.40s opacity;
+}
+#dynamic2 {
+    opacity: 1;
+    transition: 0.5s opacity;
+}
+
+#contactbutton {
+        background-color: #3CB371;
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        visibility: visible;
+        opacity: 1;
+        transition: 2.0s opacity;
+}

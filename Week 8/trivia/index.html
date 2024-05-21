@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            function wronganswer(buttonid) {
+                document.getElementById(buttonid).style.backgroundColor = 'red';
+                document.getElementById('answerfeedback').innerHTML = 'Incorrect';
+            }
+
+            function correctanswer(buttonid) {
+                document.getElementById(buttonid).style.backgroundColor = 'green';
+                document.getElementById('answerfeedback').innerHTML = 'Correct!';
+            }
+
+            function textanswer(buttonid) {
+                var input = document.getElementById('inputtext').value.toLowerCase();
+                if (input == "berlin"){
+                    document.getElementById('answerfeedback2').innerHTML = 'Correct!';
+                    document.getElementById('inputtext').style.backgroundColor = 'green';
+                }
+                else {
+                    document.getElementById('answerfeedback2').innerHTML = 'Incorrect';
+                    document.getElementById('inputtext').style.backgroundColor = 'red';
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the capital of England?</h3>
+                <hr>
+                <h4 id="answerfeedback"></h4>
+                <button id="1" onclick="wronganswer(1)" >Copenhagen</button>
+                <button id="2" onclick ="wronganswer(2)" >Lisabon</button>
+                <button id="3" onclick ="correctanswer(3)" >London</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the capital of Germany?</h3>
+                <hr>
+                <h4 id="answerfeedback2"></h4>
+                    <label> Enter your answer</label>
+                    <input type="text" id="inputtext">
+                    <button id="textbutton" onclick ="textanswer(textbutton)">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?:
+To get an idea of the person's 'aura' I took all the measurable traits using a query SELECT AVG(danceability), AVG(energy), AVG(loudness), AVG(speechiness), AVG(valence), AVG(tempo) FROM songs;
+From this I can conclude they don't like excessively loud music, They tend to like more dancable music, energetic and fast paced music.
+From the descriptions in the spotify article, I'd describe them as the 'Purple aura'
+
+
+
+
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?:
+The problem with calculating it from only looking at the highest average value is a lack of nuance.
+In the spotify article they explain they determine a users 'aura' from a pool of 6 possibilities.
+Since each song in the database has 3 values 'valence', 'energy' and 'danceability' you could quite simply average out these 3 values and compare them to the average of other users in a larger database.
+If you assigned an aura two the order of the two highest values, you would have a possibility of 6 different outcomes as seen below:
+Aura 1: Valence > Energy,
+Aura 2:Energy > Valence,
+Aura 3: Valence > Danceability,
+Aura 4: Danceability > Valence,
+Aura 5: Energy > Danceability,
+Aura 6: Danceability > Valence
+
+

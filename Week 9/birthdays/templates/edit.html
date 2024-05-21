@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Edit a Birthday</h2>
+
+                <!-- Allows user to edit aka update an entries date and month-->
+                <form name="bdayinput" action="/editconfirm" method="post">
+                    <input name="bdayname" placeholder="{{ editbirthday[0]['name'] }}" type="text">
+                    <input name="bdayid" type="hidden" value="{{ editbirthday[0]['id'] }}">
+                    <input name="bdayday" placeholder="Day" type="number" max="31">
+
+                    <select name="bdaymonth">
+                        <option disabled selected>Month</option>
+                        <option value="1">Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Apr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+
+                    <button type="submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

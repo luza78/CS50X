@@ -1,0 +1,16 @@
+books = []
+
+# Add three books to your shelf
+for i in range(2):
+    book = dict()
+    book["title"] = input("Title: ").strip().capitalize()
+    book["author"] = input("Author: ")
+
+    books.append(book)
+
+
+
+# Print book titles
+
+for book in books:
+    print(book["title"])
