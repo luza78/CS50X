@@ -1,0 +1,22 @@
+sort1 uses: Bubble sort
+How do you know?:
+It was extremely fast on already sorted arrays.
+It was the slowest, by far in the 50 reversed order test.
+
+
+sort2 uses: Merge sort
+How do you know?:
+It was significantly faster than the other two algorithms.
+Especially on the higher number data sets it became very noticable.
+The algorithm was very consistent, and performed very well, regardless of the order or size of the problem.
+Although with already the sorted words, it did get beat out by bubblesort. Which is Bubblesort's best case scenario.
+
+
+sort3 uses: Selection sort
+How do you know?:
+It seemed like the middle ground option, because dealt with smaller datasets decently.
+Furthermore the algorithm seemed more consistent in regards to performance than bubblesort,
+as it cared less about if the numbers were randomized or backwards.
+
+
+
